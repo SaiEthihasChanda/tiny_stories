@@ -257,7 +257,7 @@ max_length = st.slider("Story Length (words)", min_value=50, max_value=500, valu
 if st.button("Generate Story"):
     with st.spinner("Generating your story..."):
         # Construct the input prompt with genre
-        full_prompt = f"Write a story: {prompt}"
+        full_prompt = f"{prompt}"
         
         while True:
             # Get user input for text generation
@@ -283,4 +283,4 @@ if st.button("Clear"):
     st.session_state.prompt = ""
     st.session_state.genre = "Fantasy"
     st.session_state.max_length = 200
-    st.experimental_rerun()
+    #st.experimental_rerun()
